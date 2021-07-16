@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1267
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPI_Show", "SPI_Show\SPI_Show.csproj", "{504DA6CB-83A8-4A6F-85DC-B8AC81126AEB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{504DA6CB-83A8-4A6F-85DC-B8AC81126AEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{504DA6CB-83A8-4A6F-85DC-B8AC81126AEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{504DA6CB-83A8-4A6F-85DC-B8AC81126AEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{504DA6CB-83A8-4A6F-85DC-B8AC81126AEB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DCECCA79-D4FB-4E99-9EB4-8DF353EAB145}
+	EndGlobalSection
+EndGlobal
