@@ -1,0 +1,89 @@
+﻿<Window x:Class="SPI_Show.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SPI_Show"
+        
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        
+        mc:Ignorable="d"
+        Title="Login" Height="400" Width="300"  ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Grid Background="#eeeeee">
+        <Grid >
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" />
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="170"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid  Background="#00BFFF" >
+                <TextBlock Text="&#xe638;" FontSize="15" FontFamily="./fonts/#iconfont" HorizontalAlignment="Right" Margin="0,4,5,0" Foreground="White" MouseDown="quit"/>
+                <Image Source="delta005.png"  Width="78" Stretch="Fill" HorizontalAlignment="Left" />
+            </Grid>
+            <Grid Grid.Row="1"   >
+                <Grid Background="#00BFFF"  >
+
+                    <ComboBox Name="combox1" Margin="59,42,59,22"  Background="#00BFFF"
+                              materialDesign:HintAssist.Hint="选择要登入的界面" FontSize="20"  Foreground="White" 
+                                  >
+                        <ComboBoxItem Background="#00BFFF"  Foreground="White" Height="40"  >
+                            SPI_数据上传监控看板
+                        </ComboBoxItem>
+                        <ComboBoxItem Background="#00BFFF"  Foreground="White"  Height="40" >
+                            SPI_fail数展示
+                        </ComboBoxItem>
+
+                    </ComboBox>
+                </Grid>
+
+            </Grid>
+            <Grid Grid.Row="2" >
+
+                <TextBox   Margin="78,19,68,0" VerticalAlignment="Top"
+                  x:Name="NameTextBox" Width="154" HorizontalAlignment="Center" Height="30" FontSize="20" 
+                   materialDesign:HintAssist.Hint="Name" 
+                    materialDesign:HintAssist.HelperText="Helper text longer than error"
+                      >
+                    <TextBox.Text>
+                        <Binding
+                              Path="Name"
+                                  UpdateSourceTrigger="PropertyChanged">
+                        </Binding>
+                    </TextBox.Text>
+                </TextBox>
+
+                <PasswordBox  Height="30" Width="154"  HorizontalAlignment="Center" FontSize="20" Margin="60,80,50,20"
+                        x:Name="PasswordBox"
+                    materialDesign:HintAssist.Hint="Password"
+                   materialDesign:TextFieldAssist.HasClearButton="True"
+                        materialDesign:HintAssist.HelperText="At least 8 characters"  />
+                <materialDesign:PackIcon Kind="ClipboardAccountOutline" Margin="39,19,0,0" Height="30" Width="28" />
+
+                <TextBlock Text="&#xea32;" FontSize="20" FontFamily="./fonts/#iconfont" Margin="45,100,227,33" />
+            </Grid>
+            <Grid Grid.Row="3">
+                <Grid   Width="200"  >
+
+
+
+                    <Button  Name="Loging" Background="#00BFFF" BorderBrush="#00BFFF" IsDefault="True"
+                         Style="{StaticResource MaterialDesignRaisedDarkButton}"
+                               Height="50"
+                               materialDesign:ButtonAssist.CornerRadius="25"
+                               ToolTip="MaterialDesignRaisedDarkButton with Round Corners" VerticalAlignment="Top" Margin="0,20,0,0" Click="Loging_Click" >
+                        <TextBlock  Text="登入" FontSize="25" Foreground="White"  />
+                    </Button>
+
+
+                    <TextBlock Text="欢迎登陆SPI_看板系统" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="13" Foreground="#888888" />
+                    <Grid/>
+                </Grid>
+
+
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
